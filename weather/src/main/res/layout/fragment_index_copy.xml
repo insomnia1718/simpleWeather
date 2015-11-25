@@ -1,0 +1,249 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/index_layout"
+    android:padding="0dp"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/date_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="今天"
+            android:textColor="#F03B69"
+            android:textSize="19dp" />
+
+        <TextView
+            android:id="@+id/today_week_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/——"
+            android:textColor="#3D515E"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/current_weather_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date_info"
+
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="-16dp"
+        android:src="@mipmap/today_wea_sunny" />
+
+
+    <LinearLayout
+        android:id="@+id/today_weather_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/current_weather_icon"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.475"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-1.5dp"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/current_tem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-8dp"
+                android:layout_marginTop="-8dp"
+                android:gravity="bottom"
+                android:textColor="@color/dot_active"
+                android:shadowRadius="4"
+                android:shadowDy="3"
+                android:shadowDx="3"
+                android:shadowColor="#66000000"
+                android:includeFontPadding="false"
+                android:text="--'"
+                android:textSize="46dp" />
+
+            <TextView
+                android:id="@+id/current_weather_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:paddingRight="13dp"
+                android:text="— —"
+                android:textColor="#5D4037"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/divider_line"
+            android:layout_width="0dp"
+            android:layout_weight="0.05"
+            android:layout_height="match_parent"
+
+            android:src="@mipmap/divider" />
+
+        <RelativeLayout
+            android:id="@+id/details"
+            android:layout_weight="0.475"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/today_high_low_tem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="-4dp"
+                    android:src="@mipmap/tem_high" />
+
+                <TextView
+                    android:id="@+id/today_high_tem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--°"
+                    android:textColor="#605F5D"
+                    android:textSize="15dp"
+                    android:typeface="monospace" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="2dp"
+                    android:src="@mipmap/tem_low" />
+
+                <TextView
+                    android:id="@+id/today_low_tem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--°"
+                    android:textColor="#605F5D"
+                    android:textSize="15dp"
+                    android:typeface="monospace" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/current_wea_wind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/today_high_low_tem"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="top"
+                android:text="— —"
+                android:textColor="#5D4037"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/today_high_low_tem"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:paddingLeft="2dp">
+
+                <TextView
+                    android:id="@+id/today_pm25_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="PM2.5: "
+                    android:textColor="#646464"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/today_pm25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="--"
+                    android:textColor="#F03B69"
+                    android:textSize="15dp"
+                    android:typeface="monospace" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:menu_fab_size="mini"
+        android:layout_marginRight="4dp"
+        app:menu_shadowRadius="2dp"
+        android:id="@+id/add_bn_menu"
+        app:menu_labels_textColor="#ffffff"
+        app:menu_colorNormal="@color/dot_active"
+        app:menu_colorPressed="#FF962542"
+        app:menu_labels_colorNormal="#7e000000"
+        app:menu_labels_showShadow="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true">
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/icon_add_fun"
+            android:layout_width="wrap_content"
+            app:fab_label="Fun "
+            app:fab_shadowRadius="2dp"
+            android:src="@mipmap/add_fun1"
+            app:fab_colorNormal="#607D8B"
+            app:fab_colorPressed="#FF34444B"
+            android:layout_height="wrap_content"
+            app:fab_size="mini" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/icon_add_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="设置"
+            app:fab_shadowRadius="2dp"
+            android:src="@mipmap/add_setting3"
+            app:fab_colorNormal="#5D4037"
+            app:fab_colorPressed="#FF30211D"
+            app:fab_size="mini" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/icon_add_city"
+            android:layout_width="wrap_content"
+            app:fab_label="搜寻"
+            app:fab_shadowRadius="2dp"
+            android:src="@mipmap/add_city1"
+            app:fab_colorNormal="#FF5252"
+            app:fab_colorPressed="#FFB03A3A"
+            android:layout_height="wrap_content"
+            app:fab_size="mini" />
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>

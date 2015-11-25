@@ -1,0 +1,160 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="0dp"
+
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="今天"
+            android:textColor="#F03B69"
+            android:textSize="19dp" />
+
+        <TextView
+            android:id="@+id/today_week_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/——"
+            android:textColor="#3D515E"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/current_tem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:text="--"
+        android:layout_marginBottom="-16dp"
+        android:textColor="#3D515E"
+        android:textSize="42dp"
+        android:typeface="monospace" />
+
+
+    <ImageView
+        android:id="@+id/current_weather_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_marginTop="-36dp"
+        android:layout_marginBottom="-16dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/today_wea_sunny" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:id="@+id/details"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/current_weather_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="多云"
+                android:textColor="#3D515E"
+                android:textSize="17dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="22dp"
+                    android:layout_marginRight="-4dp"
+                    android:layout_marginTop="1dp"
+                    android:src="@mipmap/tem_arrow_up" />
+
+                <TextView
+                    android:id="@+id/today_high_tem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="28°"
+                    android:textColor="#605F5D"
+                    android:textSize="18dp"
+                    android:typeface="monospace" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_marginRight="-4dp"
+                    android:layout_height="22dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="8dp"
+                    android:src="@mipmap/tem_arrow_down" />
+
+                <TextView
+                    android:id="@+id/today_low_tem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="28°"
+                    android:textColor="#605F5D"
+                    android:textSize="18dp"
+                    android:typeface="monospace" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PM2.5 : "
+                    android:id="@+id/today_pm25_text"
+                    android:textColor="#808080"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/today_pm25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="48"
+                    android:textColor="#F03B69"
+                    android:textSize="18dp"
+                    android:typeface="monospace" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/icon_add"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/icon_add" />
+    </RelativeLayout>
+</LinearLayout>
